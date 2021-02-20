@@ -23,6 +23,11 @@ interface IProps {
 }
 
 const renderPosting = (posting: Posting, onPress: (id: number) => void) => {
+  const color = {
+    0: '#fc544b',
+    1: '#54ca68',
+    2: '#ffc107',
+  };
   return (
     <TouchableOpacity
       onPress={() => onPress(posting.id)}
@@ -32,7 +37,10 @@ const renderPosting = (posting: Posting, onPress: (id: number) => void) => {
         <Text style={styles.text}>Код ТН ВЭД: {posting.code_ved}</Text>
       </View>
       <View>
-        <Text>{STATUSES[posting.status]}</Text>
+        <View
+          style={[styles.status, { backgroundColor: color[posting.status] }]}>
+          <Text style={{ color: '#fff' }}>{STATUSES[posting.status]}</Text>
+        </View>
         <Text>{posting.date_coming}</Text>
       </View>
     </TouchableOpacity>

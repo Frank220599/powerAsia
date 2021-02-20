@@ -36,4 +36,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  status: {
+    backgroundColor: '#1a73e8',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
+  },
 });

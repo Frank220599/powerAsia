@@ -4,6 +4,7 @@ import { Props } from './connect';
 import { NewWriteOffProduct } from '../../store/writeOff/types';
 import { Modal } from 'react-native';
 import moment from 'moment';
+import reactotron from '../../store/ReactotronConfig';
 
 export class AddWriteOffModalController extends Component<Props> {
   state = {
@@ -65,6 +66,8 @@ export class AddWriteOffModalController extends Component<Props> {
   };
 
   render() {
+    reactotron?.log(this.state.writeOffProducts);
+
     const {
       writeOffTypes,
       paymentTypes,

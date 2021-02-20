@@ -1,4 +1,4 @@
-package com.powerasia;
+package com.asiapower;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "PowerAsia";
+    return "Asia Power";
   }
 }

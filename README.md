@@ -1,1 +1,1 @@
-"# powerAsia" 
+"# asiapower" 

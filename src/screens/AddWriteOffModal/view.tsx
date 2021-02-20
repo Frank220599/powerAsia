@@ -11,6 +11,7 @@ import { Select } from '../../components/Select';
 import { Input } from '../../components/Input';
 import { Handbook } from '../../store/handbooks/types';
 import { Agent } from '../../store/agent/types';
+import { SearchableSelect } from '../../components/SearchableSelect';
 
 enum InputLabels {
   agents = 'Контрагенты',
@@ -140,7 +141,7 @@ export const AddWriteOffModalView = ({
             setWriteOffProductField(index, fieldName, value);
           return (
             <View style={styles.rounded} key={index}>
-              <Select
+              <SearchableSelect
                 value={item.product}
                 options={products}
                 onValueChange={(value) => valueSetter('product', value)}

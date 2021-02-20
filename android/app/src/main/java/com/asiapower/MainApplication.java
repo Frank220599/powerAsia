@@ -1,4 +1,4 @@
-package com.powerasia;
+package com.asiapower;
 
 import androidx.multidex.MultiDexApplication;
 import android.content.Context;
@@ -66,7 +66,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.powerasia.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.asiapower.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
