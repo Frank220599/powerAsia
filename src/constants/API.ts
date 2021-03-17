@@ -1,4 +1,5 @@
 export enum API {
+  BASE_URL = 'http://asiapower.uz/',
   // Inventory
   GET_INVENTORY_LIST = 'api/inventory',
   GET_INVENTORY = 'api/inventory/view',

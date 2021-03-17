@@ -32,5 +32,13 @@ export default StyleSheet.create({
     borderRadius: 10,
     elevation: 8,
     margin: 10,
+    alignItems: 'flex-start',
+  },
+  status: {
+    backgroundColor: '#1a73e8',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
   },
 });

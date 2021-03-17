@@ -19,6 +19,10 @@ interface IProps {
 }
 
 const renderWriteOff = (writeOff: WriteOff, onPress: (id: number) => void) => {
+  const color = {
+    0: '#fc544b',
+    1: '#54ca68',
+  };
   return (
     <TouchableOpacity
       onPress={() => onPress(writeOff.id)}
@@ -33,7 +37,12 @@ const renderWriteOff = (writeOff: WriteOff, onPress: (id: number) => void) => {
         <Text style={styles.text}>Ф.И.О: {writeOff.fio}</Text>
       </View>
       <View>
-        <Text>{writeOff.status ? 'Активный' : 'Не Активный'}</Text>
+        <View
+          style={[styles.status, { backgroundColor: color[writeOff.status] }]}>
+          <Text style={{ color: '#fff' }}>
+            {writeOff.status ? 'Активный' : 'Не Активный'}
+          </Text>
+        </View>
         <Text>{writeOff.date_writeoff}</Text>
       </View>
     </TouchableOpacity>

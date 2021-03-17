@@ -19,7 +19,7 @@ export default StyleSheet.create({
   text: { fontWeight: 'bold' },
   inventoryWrapper: {
     flexDirection: 'row',
-    width: '100%',
+    flex: 1,
     backgroundColor: '#fff',
     paddingHorizontal: 15,
     paddingVertical: 15,
@@ -36,5 +36,12 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  status: {
+    backgroundColor: '#1a73e8',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
   },
 });

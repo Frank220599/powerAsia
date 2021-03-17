@@ -31,4 +31,11 @@ export default StyleSheet.create({
     elevation: 8,
     margin: 10,
   },
+  status: {
+    backgroundColor: '#1a73e8',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
+  },
 });

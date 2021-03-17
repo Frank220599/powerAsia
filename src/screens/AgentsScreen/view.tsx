@@ -19,6 +19,10 @@ interface IProps {
 }
 
 const renderAgent = (agent: Agent, onPress: (id: number) => void) => {
+  const color = {
+    0: '#fc544b',
+    1: '#54ca68',
+  };
   return (
     <TouchableOpacity
       style={styles.agentWrapper}
@@ -30,8 +34,10 @@ const renderAgent = (agent: Agent, onPress: (id: number) => void) => {
         <Text style={styles.text}>Телефон: {agent.phone}</Text>
         <Text style={styles.text}>E-mail: {agent.email}</Text>
       </View>
-      <View>
-        <Text>{agent.status ? 'Активный' : 'Не Активный'}</Text>
+      <View style={[styles.status, { backgroundColor: color[agent.status] }]}>
+        <Text style={{ color: '#fff' }}>
+          {agent.status ? 'Активный' : 'Не Активный'}
+        </Text>
       </View>
     </TouchableOpacity>
   );

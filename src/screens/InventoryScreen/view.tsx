@@ -22,6 +22,10 @@ const renderInventory = (
   inventory: Inventory,
   onPress: (id: number) => void,
 ) => {
+  const color = {
+    0: '#fc544b',
+    1: '#54ca68',
+  };
   return (
     <TouchableOpacity
       onPress={() => onPress(inventory.id)}
@@ -31,7 +35,12 @@ const renderInventory = (
         <Text style={styles.text}>Ф.И.О: {inventory.fio}</Text>
       </View>
       <View>
-        <Text>{inventory.status ? 'Активный' : 'Не Активный'}</Text>
+        <View
+          style={[styles.status, { backgroundColor: color[inventory.status] }]}>
+          <Text style={{ color: '#fff' }}>
+            {inventory.status ? 'Активный' : 'Не Активный'}
+          </Text>
+        </View>
         <Text>{inventory.date_inventory}</Text>
       </View>
     </TouchableOpacity>
